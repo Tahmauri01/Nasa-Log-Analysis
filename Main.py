@@ -1,4 +1,6 @@
+import matplotlib.pyplot as plt
 from collections import Counter
+
 myFile = open("NASA_access_log_Jul95")
 
 ip_addresses = []
@@ -26,9 +28,22 @@ try:
 except:
     print("uh oh")
 
+ip_counter = Counter(ip_addresses)
+#Counter(ip_counter.most_common(3))
 
 
-print("The most frequent IP address was " + str(Counter(ip_addresses).most_common(1)))
+
+print("The most frequent IP address was " + str(Counter(ip_addresses).most_common(3)))
 print("The most frequent date was " + str(Counter(dates).most_common(1))) 
 print("The most frequent file type was " + str(Counter(directories).most_common(7)))
 
+
+
+print(ip_counter.keys())
+print(ip_counter.values())
+
+plt.figure(figsize=((10), (7)))
+
+plt.bar(ip_counter.keys(), ip_counter.values(), align='edge', width=30)
+
+plt.show()
