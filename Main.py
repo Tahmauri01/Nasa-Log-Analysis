@@ -57,8 +57,8 @@ plt.bar(keyIP, valueIP)
 
 plt.xticks(rotation=30)
 
-ax.set_title('Most Common IP Addresses')
-ax.set_xlabel('Ip Addresses')
+ax.set_title('Most Common DNS Addresses')
+ax.set_xlabel('DNS Addresses')
 
 plt.show()
 
