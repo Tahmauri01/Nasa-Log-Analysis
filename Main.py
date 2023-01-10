@@ -7,7 +7,7 @@ ip_addresses = []
 dates = []
 directories = []
 
-
+#How the code finds ip addresses, dates and file types.
 try:
     for lines in myFile:
         x = lines.split(" ")[0]
@@ -34,7 +34,7 @@ ip_counter = Counter(ip_addresses)
 #Counter(ip_counter.most_common(3))
 
 
-
+#Tells the user the most common ip addresses, dates, and file types.
 print("The most frequent IP address was " + str(Counter(ip_addresses).most_common(3)))
 print("The most frequent date was " + str(Counter(dates).most_common(4))) 
 print("The most frequent file type was " + str(Counter(directories).most_common(7)))
@@ -44,6 +44,8 @@ fig, ax = plt.subplots()
 # print(ip_counter.keys())
 # print(ip_counter.values())
 
+
+#Uses matplotlib to graph the most common IP addresses.
 keyIP = []
 valueIP = []
 
@@ -64,7 +66,7 @@ plt.show()
 
 
 
-
+#Uses matplotlib to graph the most common dates
 keyTime = []
 valueTime = []
 
@@ -87,7 +89,7 @@ plt.show()
 
 
 
-
+#Uses matplotlib to graph most common file types
 keyFile = []
 valueFile = []
 

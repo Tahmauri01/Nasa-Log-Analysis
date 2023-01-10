@@ -1,19 +1,3 @@
-blah
-
-*blah*
-
-**blah**
-
-# Heading
-
-## Heading
-
-### Heading
-
-- item
-- item
-- item
-
 # Introduction
 I analyzed the web server log from _month_ of _1995_. See the graphs before to see what the information for the data collected. 
 
