@@ -7,6 +7,8 @@ ip_addresses = []
 dates = []
 directories = []
 
+
+
 #How the code finds ip addresses, dates and file types.
 try:
     for lines in myFile:
@@ -39,6 +41,8 @@ print("The most frequent IP address was " + str(Counter(ip_addresses).most_commo
 print("The most frequent date was " + str(Counter(dates).most_common(4))) 
 print("The most frequent file type was " + str(Counter(directories).most_common(7)))
 
+plt.style.use("dark_background")
+
 fig, ax = plt.subplots()
 
 # print(ip_counter.keys())
@@ -55,12 +59,14 @@ for ip in ip_counter:
    keyIP.append(ip[0])
    valueIP.append(ip[1])
 
-plt.bar(keyIP, valueIP)
+plt.bar(keyIP, valueIP, color='yellow')
+
 
 plt.xticks(rotation=30)
 
 ax.set_title('Most Common DNS Addresses')
 ax.set_xlabel('DNS Addresses')
+
 
 plt.show()
 
@@ -76,7 +82,7 @@ for time in Time_counter:
    keyTime.append(time[0])
    valueTime.append(time[1])
 
-plt.plot(keyTime, valueTime, marker='.', linestyle='-')
+plt.plot(keyTime, valueTime, marker='.', linestyle='-', color='yellow')
 
 plt.xticks(rotation=30)
 
@@ -100,7 +106,7 @@ for files in file_counter:
         keyFile.append(files[0])
         valueFile.append(files[1])
 
-plt.bar(keyFile, valueFile)
+plt.bar(keyFile, valueFile, color='yellow')
 
 plt.xticks(rotation=30)
 
